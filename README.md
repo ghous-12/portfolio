@@ -1,16 +1,105 @@
-# React + Vite
+# Syed Ghous Mohiuddin Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Production-style React portfolio built with Vite, React Router, GSAP, Tailwind CSS, and React Icons.
 
-Currently, two official plugins are available:
+## Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Build for production:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+```
 
-## Expanding the ESLint configuration
+Lint the project:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run lint
+```
+
+## Edit Portfolio Data
+
+All portfolio content lives in:
+
+```text
+src/utils/constant.jsx
+```
+
+Update this file for profile text, navigation, experience, education, skills, projects, services, contact details, footer copy, SEO text, and Formspree settings.
+
+## Resume File
+
+The current downloadable resume is here:
+
+```text
+public/resume/Syed-Ghous-Mohiuddin-Resume.docx
+```
+
+The button path is configured in `siteConfig.resumeUrl` inside `src/utils/constant.jsx`.
+
+To use a PDF instead, add it to `public/resume/` and update:
+
+```js
+resumeUrl: "/resume/Your-Resume.pdf";
+```
+
+## Project Media
+
+Add project images or videos to `public/projects/` or another public folder, then reference them from each project object in `src/utils/constant.jsx`.
+
+Example:
+
+```js
+media: [
+  {
+    type: "image",
+    src: "/projects/mirror-configurator/screen-01.jpg",
+    alt: "Mirror configurator product flow",
+    caption: "Configurator product page",
+  },
+];
+```
+
+## Configure Formspree
+
+Replace the placeholder endpoint in `formConfig`:
+
+```js
+export const formConfig = {
+  endpoint: "https://formspree.io/f/REPLACE_WITH_FORM_ID",
+};
+```
+
+Until that value is replaced, the contact form validates locally but will not submit.
+
+## Add A Project
+
+Add a new object to the `projects` array in `src/utils/constant.jsx`.
+
+Use a stable URL slug for `id`, for example:
+
+```js
+id: "new-project-slug";
+```
+
+That project will be available at:
+
+```text
+/projects/new-project-slug
+```
+
+Leave unavailable URLs, media, dates, or result fields as empty strings or empty arrays. The UI hides missing fields automatically.
+
+## Featured Projects
+
+The homepage displays the first three projects where:
+
+```js
+featured: true;
+```
+
+Keep exactly three projects marked as featured for the intended homepage layout.
