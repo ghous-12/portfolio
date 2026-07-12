@@ -12,8 +12,7 @@ export const siteConfig = {
     "Frontend focused Software Engineer building production-grade React applications, Shopify Plus integrations, and complex state-driven interfaces.",
   footer: {
     eyebrow: "Available for thoughtful frontend work",
-    ctaTitle:
-      "Have a React or Shopify build that needs sharp execution?",
+    ctaTitle: "Have a React or Shopify build that needs sharp execution?",
     credit: "Built with React and care.",
   },
 };
@@ -49,7 +48,7 @@ export const experience = [
     role: "Associate Software Engineer",
     startDate: "Nov 2024",
     endDate: "Present",
-    location: "",
+    location: "Karachi, Pakistan",
     summary:
       "Architects and ships React applications, Shopify Plus integrations, and production-grade configurator systems.",
     achievements: [
@@ -67,7 +66,7 @@ export const experience = [
     role: "Software Engineer Intern",
     startDate: "Aug 2024",
     endDate: "Nov 2024",
-    location: "",
+    location: "Karachi, Pakistan",
     summary:
       "Developed HRMS functionality, reusable frontend components, API integrations, and role-based access flows.",
     achievements: [
@@ -223,7 +222,17 @@ export const projects = [
       "Shipped a production-grade configurator now maintained as part of the Shopify Plus storefront.",
       "Enabled saved configurations, customer follow-up tracking, and cart-editing flows.",
     ],
-    media: [],
+    media: [
+      { src: "https://picsum.photos/800/600" },
+      { src: "https://picsum.photos/1200/800" },
+      { src: "https://picsum.photos/1920/1080" },
+      { src: "https://placehold.co/800x600?text=Project+Screens" },
+      { src: "https://placehold.co/1200x800/0f172a/ffffff?text=Coming+Soon" },
+      {
+        type: "video",
+        src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      },
+    ],
   },
   {
     id: "import-pilot",
@@ -288,7 +297,13 @@ export const projects = [
     coverAlt: "",
     liveUrl: "",
     githubUrl: "",
-    technologies: ["React", "JavaScript", "Selection API", "Range API", "Markdown"],
+    technologies: [
+      "React",
+      "JavaScript",
+      "Selection API",
+      "Range API",
+      "Markdown",
+    ],
     objectives: [
       "Create a lightweight rich text editor for React without runtime dependencies.",
       "Provide editing behavior through native browser selection primitives.",
@@ -312,6 +327,81 @@ export const projects = [
       "Provides a dependency-free rich text editing option for React projects.",
     ],
     media: [],
+  },
+  {
+    id: "render-verse",
+    title: "Render Verse",
+    association: "Personal",
+    featured: true,
+    category: "Architecture & Real Estate",
+    shortDescription:
+      "A premium portfolio website showcasing architectural visualizations through immersive galleries, animations, and category-driven browsing.",
+    description:
+      "Designed and developed a luxury-inspired portfolio website for an architectural visualization studio. The platform showcases over 500 architectural renders across multiple categories with immersive animations, custom parallax effects, and a refined browsing experience that emphasizes the studio's premium brand identity.",
+    role: "Frontend Developer",
+    client: "Render Verse",
+    startDate: "",
+    endDate: "",
+    status: "Production",
+    coverImage: "",
+    coverAlt: "Render Verse portfolio homepage",
+    liveUrl: "https://therenderverse.com",
+    githubUrl: "",
+    technologies: [
+      "React",
+      "ReactBits",
+      "JavaScript",
+      "CSS3",
+      "HTML5",
+      "Formspree",
+      "Animate on Scroll (AOS)",
+    ],
+    objectives: [
+      "Create a luxury-focused digital portfolio that reflects the client's premium brand.",
+      "Present over 500 architectural renders in a visually engaging and intuitive gallery.",
+      "Deliver smooth animations and interactions to elevate the browsing experience.",
+    ],
+    responsibilities: [
+      "Designed and developed the complete frontend application in React.",
+      "Built a categorized gallery system for browsing architectural renders.",
+      "Implemented custom parallax effects and scroll-triggered animations.",
+      "Developed responsive layouts optimized for desktop, tablet, and mobile devices.",
+      "Integrated a contact form using Formspree for lead generation.",
+    ],
+    features: [
+      "500+ architectural render showcase",
+      "Category-based gallery navigation",
+      "Interior, Exterior, Commercial, 3D Floor Plan, Virtual Tour, and Walk Through Animation categories",
+      "Luxury-inspired UI and visual design",
+      "Custom parallax scrolling effects",
+      "Animate-on-scroll transitions",
+      "Fully responsive design",
+      "Integrated contact form",
+    ],
+    challenges: [
+      "Designing a portfolio experience that felt premium while remaining intuitive to navigate.",
+      "Presenting a large collection of architectural renders without overwhelming users.",
+      "Creating smooth, visually engaging interactions that complemented the brand identity.",
+    ],
+    solutions: [
+      "Developed a clean category-based gallery that allows users to quickly browse different visualization types.",
+      "Implemented custom parallax effects and scroll-triggered animations to create a modern, immersive experience.",
+      "Focused on a minimal, luxury-inspired interface that highlights the client's work rather than distracting from it.",
+    ],
+    outcomes: [
+      "Delivered a production-ready portfolio website aligned with the client's premium branding.",
+      "Successfully showcased more than 500 architectural visualization projects within an organized browsing experience.",
+      "Created a distinctive online presence that effectively highlights the studio's capabilities and services.",
+    ],
+    media: [
+      { src: "https://picsum.photos/1200/800?random=1" },
+      { src: "https://picsum.photos/1200/800?random=2" },
+      { src: "https://picsum.photos/1200/800?random=3" },
+      {
+        type: "video",
+        src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      },
+    ],
   },
 ];
 

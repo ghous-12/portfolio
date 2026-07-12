@@ -26,6 +26,46 @@ export function ProjectMediaCarousel({ media = [], title }) {
     }
   };
 
+  const renderActiveMedia = () => {
+    if (activeMedia.type === "diveVideo") {
+      return (
+        <iframe
+          allow="autoplay"
+          className="media-carousel__iframe rounded-lg"
+          height="500"
+          src={activeMedia.src}
+          title={activeMedia.alt || `${title} media ${activeIndex + 1}`}
+          width="100%"
+        />
+      );
+    }
+
+    if (activeMedia.type === "video") {
+      return (
+        <video
+          controls
+          preload="metadata"
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          poster={activeMedia.poster || undefined}
+        >
+          <source src={activeMedia.src} type="video/mp4" />
+          <track kind="captions" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    }
+
+    return (
+      <img
+        alt={activeMedia.alt || `${title} media ${activeIndex + 1}`}
+        loading="lazy"
+        src={activeMedia.src}
+      />
+    );
+  };
+
   return (
     <section
       aria-label={`${title} media`}
@@ -36,24 +76,7 @@ export function ProjectMediaCarousel({ media = [], title }) {
     >
       <div className="container">
         <div className="media-carousel">
-          <div className="media-carousel__viewport">
-            {activeMedia.type === "video" ? (
-              <video
-                controls
-                poster={activeMedia.poster || undefined}
-                preload="metadata"
-                src={activeMedia.src}
-              >
-                <track kind="captions" />
-              </video>
-            ) : (
-              <img
-                alt={activeMedia.alt || `${title} media ${activeIndex + 1}`}
-                loading="lazy"
-                src={activeMedia.src}
-              />
-            )}
-          </div>
+          <div className="media-carousel__viewport">{renderActiveMedia()}</div>
 
           {activeMedia.caption ? (
             <p className="media-carousel__caption">{activeMedia.caption}</p>
