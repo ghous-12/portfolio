@@ -3,10 +3,7 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { Button } from "../../shared/Button.jsx";
 import { Container } from "../../shared/Container.jsx";
 import { SectionHeading } from "../../shared/SectionHeading.jsx";
-import {
-  contactDetails,
-  formConfig,
-} from "../../../utils/constant.jsx";
+import { contactDetails, formConfig } from "../../../utils/constant.jsx";
 
 const initialValues = {
   budget: formConfig.budgetRanges[0] || "",
@@ -218,7 +215,7 @@ export function Contact() {
               aria-invalid={Boolean(errors.message)}
               id="message"
               name="message"
-              rows="6"
+              rows={6}
               value={values.message}
               onChange={handleChange}
             />
@@ -231,7 +228,12 @@ export function Contact() {
             </p>
           ) : null}
 
-          <Button disabled={submitting} icon="none" type="submit" variant="primary">
+          <Button
+            disabled={submitting}
+            icon="none"
+            type="submit"
+            variant="primary"
+          >
             {submitting ? "Sending..." : "Send project brief"}
           </Button>
         </form>

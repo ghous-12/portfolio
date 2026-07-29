@@ -30,6 +30,7 @@ export function ProjectMediaCarousel({ media = [], title }) {
     if (activeMedia.type === "diveVideo") {
       return (
         <iframe
+          key={activeMedia.src}
           allow="autoplay"
           className="media-carousel__iframe rounded-lg"
           height="500"
@@ -43,15 +44,16 @@ export function ProjectMediaCarousel({ media = [], title }) {
     if (activeMedia.type === "video") {
       return (
         <video
+          key={activeMedia.src}
           controls
           preload="metadata"
           autoPlay={true}
           loop={true}
           muted={true}
+          playsInline
           poster={activeMedia.poster || undefined}
+          src={activeMedia.src}
         >
-          <source src={activeMedia.src} type="video/mp4" />
-          <track kind="captions" />
           Your browser does not support the video tag.
         </video>
       );
@@ -59,6 +61,7 @@ export function ProjectMediaCarousel({ media = [], title }) {
 
     return (
       <img
+        key={activeMedia.src}
         alt={activeMedia.alt || `${title} media ${activeIndex + 1}`}
         loading="lazy"
         src={activeMedia.src}

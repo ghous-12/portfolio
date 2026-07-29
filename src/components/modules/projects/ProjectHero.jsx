@@ -4,7 +4,9 @@ import { Container } from "../../shared/Container.jsx";
 import { ProjectArtwork } from "./ProjectCard.jsx";
 
 export function ProjectHero({ project }) {
-  const timeline = [project.startDate, project.endDate].filter(Boolean).join(" - ");
+  const timeline = [project.startDate, project.endDate]
+    .filter(Boolean)
+    .join(" - ");
   const metaItems = [
     project.association,
     project.role,
@@ -40,15 +42,29 @@ export function ProjectHero({ project }) {
 
           <div className="project-hero__actions">
             {project.liveUrl ? (
-              <Button external href={project.liveUrl} icon="none" variant="primary">
-                <FiExternalLink aria-hidden="true" />
-                Live website
+              <Button
+                external
+                href={project.liveUrl}
+                icon="none"
+                variant="primary"
+              >
+                <span className="flex items-center gap-2">
+                  <FiExternalLink aria-hidden="true" />
+                  Live website
+                </span>
               </Button>
             ) : null}
             {project.githubUrl ? (
-              <Button external href={project.githubUrl} icon="none" variant="secondary">
-                <FiGithub aria-hidden="true" />
-                GitHub
+              <Button
+                external
+                href={project.githubUrl}
+                icon="none"
+                variant="secondary"
+              >
+                <span className="flex items-center gap-2">
+                  <FiGithub aria-hidden="true" />
+                  GitHub
+                </span>
               </Button>
             ) : null}
             <Button to="/#contact" variant="ghost">

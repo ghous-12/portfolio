@@ -101,16 +101,22 @@ export function Hero() {
 
           {socialLinks.length ? (
             <div className="hero__socials">
-              {socialLinks.map((link) => (
-                <a
-                  href={link.href}
-                  key={link.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+
+                return (
+                  <a
+                    href={link.href}
+                    key={link.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label={link.label}
+                  >
+                    {Icon ? <Icon aria-hidden="true" /> : null}
+                    <span>{link.label}</span>
+                  </a>
+                );
+              })}
             </div>
           ) : null}
         </div>
