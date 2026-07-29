@@ -569,7 +569,7 @@ export const contactDetails = {
 };
 
 export const formConfig = {
-  endpoint: "https://formspree.io/f/REPLACE_WITH_FORM_ID",
+  endpoint: "https://formspree.io/f/mlgylkvq",
   serviceOptions: services.map((service) => service.title),
   budgetRanges: [
     "Not sure yet",
