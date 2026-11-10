@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "../hoc/Layout.jsx";
+import { CaseStudyPage } from "../components/modules/pages/CaseStudyPage.jsx";
 import { HomePage } from "../components/modules/pages/HomePage.jsx";
 import { ProjectDetailsPage } from "../components/modules/pages/ProjectDetailsPage.jsx";
 import { ProjectsPage } from "../components/modules/pages/ProjectsPage.jsx";
@@ -13,6 +14,7 @@ export function AppRoutes() {
           <Route index element={<HomePage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="projects/:projectId" element={<ProjectDetailsPage />} />
+          <Route path="case-study" element={<CaseStudyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

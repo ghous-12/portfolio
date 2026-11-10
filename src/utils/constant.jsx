@@ -23,6 +23,7 @@ export const navigationLinks = [
   { label: "Home", href: "/#home", sectionId: "home" },
   { label: "About", href: "/#about", sectionId: "about" },
   { label: "Projects", href: "/projects", route: "/projects" },
+  { label: "Case Study", href: "/case-study", route: "/case-study" },
   { label: "Services", href: "/#services", sectionId: "services" },
   { label: "Contact", href: "/#contact", sectionId: "contact" },
 ];
@@ -589,6 +590,11 @@ export const seo = {
     title: `Projects | ${siteConfig.name}`,
     description:
       "Selected React, Shopify Plus, and developer tooling projects by Syed Ghous Mohiuddin.",
+  },
+  caseStudy: {
+    title: `Case Study | Spiegelmax | ${siteConfig.name}`,
+    description:
+      "How I engineered the React frontend of a Shopify mirror configurator that grew from around 14 to 72 production templates across four major UI stages.",
   },
   notFound: {
     title: `Page not found | ${siteConfig.name}`,
